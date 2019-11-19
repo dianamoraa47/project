@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Registration</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<body class="bg-warning">
+	<h4 class="bg-info"></h4>
+
+
+<div class="container">
+{%if user.is_authenticated%}
+  <h1>WELCOME {{user.username}}</h1><br>
+<!--   <p>The form below contains two input elements; one of type text and one of type password:</p>
+ --> 
+
+  <form action="/action_page.php">
+    <div class="form-group">
+      <label for="usr"></label>
+        <h3>Add a student</h3><a href="/student/add">here</a><input type="text" class="form-control" id="usr" name="student">
+         </div>
+
+    <div class="form-group">
+    <label for="pwd"></label> 
+      or
+<h3>Logout</h3><a href="accounts/logout">here</a><br>
+you are logged in <a href="/accounts/login">here</a>
+</div>
+
+<div class="form-group">
+    <label for="pwd"></label> 
+    {%else%}<strong> 
+         you are not logged in
+        HELLO GUEST you can log in!!!
+<a href="/accounts/register">HERE</a>
+or</strong>
+           {%endif%}
+
+<!--   <input type="password" class="form-control" id="pwd" name="password" />
+ -->   </div>
+<!--     <button type="submit" class="btn btn-primary">Submit</button>
+ -->  <div>
+    <button class="btn btn-primary">
+    <span class="spinner-border spinner-border-sm"></span>
+      Loading...  
+     
+
+
+</button>
+</div>
+</form>
+</div>
+
+</body>
+</html>

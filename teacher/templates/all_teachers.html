@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title></title>
+</head>
+<body class="bg-dark" ><meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<h1 class="bg-danger">List teacher</h1>
+
+<table class="table table striped">
+<tr>
+<th class="bg-info">First Name </th>
+<th class="bg-info">Last Name </th>
+<th class="bg-info">Profession</th>
+<th class="bg-info">Gender</th>
+
+</tr>
+
+{%for teacher in teachers%}
+<tr>
+	<td class="bg-success">{{teacher.First_name}}</td>
+	<td class="bg-success">{{teacher.Last_name}}</td>
+	<td class="bg-success">{{teacher.Profession}}</td>
+	<td class="bg-success">{{teacher.Gender}}</td>
+
+<!-- <td> <a href="/teacher/edit/{{teacher.pk}}"{{teacher.pk}}>Edit</a></td>
+<teacher.objects.get(pk = 5)>
+<td><a href="/teacher/view/{{teacher.pk}}"{{teacher.pk}}>View more</a></td>
+ -->
+<td> <a href="/teacher/view/{{teacher.pk}}"{{teacher.pk}}>view more</a></td>
+<teacher.objects.get(pk = 5)>
+<td><a href="/teacher/edit/{{teacher.pk}}"{{teacher.pk}}>edit</a></td>
+
+</tr>
+{% endfor %}
+</div>
+</table>
+</body>
+</html>

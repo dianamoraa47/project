@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>add teacher</title>
+</head>
+<body class="bg-primary">
+<div class="cont">
+	<h2 class="bg-primary">ADD A NEW TEACHER</h2>
+
+<form method="POST">{%csrf_token%}
+	{{form.as_p}}
+	<!-- <button type="submit"> Add </button> -->
+	<button type="submit"> SAVE </button>
+
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</div>
+</form>
+</body>
+</html>
